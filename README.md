@@ -43,7 +43,11 @@ If you find our survey useful for your research, please cite the following paper
     - [Visual SRL](#visual-srl)
     - [Video SRL](#video-srl)
     - [Speech SRL](#speech-srl)
-
+- [Method](#method)
+    - [Statistical Machine Learning Methods](#statistical-machine-learning-methods)
+    <!-- - [Neural Network Methods](#neural-network-methods)
+    - [Graph-based Methods](#graph-based-methods)
+    - [Generative Methods](#generative-methods) -->
 ## Project Format Reference
 
 This project follows the format of [Awesome-LLM4IE-Papers](https://github.com/quqxui/Awesome-LLM4IE-Papers/blob/main/README.md).
@@ -79,5 +83,24 @@ A taxonomy by various modals.
 ## Speech SRL
 | Dataset | Corpus | Scale | Scenario | Languages | Link |
 | :----- | :--------------: | :-------: | :---------: |:---------: |:---------: |
-| [AS-SRL](https://aclanthology.org/2024.findings-acl.527.pdf) | AISHELL-1, CPB | 9,000 | speech | Zh | [GitHub](https://github.com/DreamH1gh/SpeechSRL) |
+| [AS-SRL](https://aclanthology.org/2024.findings-acl.527.pdf) | AISHELL-1, CPB | 9,000 | speech | Zh | [GitHub](https://github.com/DreamH1gh/SpeechSRL) <br> 🤗[Hugging Face](https://huggingface.co/datasets/Santu00/AS-SRL)|
 
+# Method
+A taxonomy by various learning paradigms.
+## Statistical Machine Learning Methods
+|  Paper  |      Venue    |   Date  | Code |
+| :----- | :--------------: | :------- | :---------: |
+| [Automatic Labeling of Semantic Roles](https://aclanthology.org/J02-3001.pdf) | CL | 2002 | - |
+| [Shallow Semantic Parsing using Support Vector Machines](https://aclanthology.org/N04-1030.pdf) | NAACL | 2004 | - |
+| [Calibrating Features for Semantic Role Labeling](https://aclanthology.org/W04-3212.pdf) | EMNLP | 2004 | - |
+| [Automatic semantic role labeling for Chinese verbs](https://www.researchgate.net/profile/Martha_Palmer2/publication/220814801_Automatic_Semantic_Role_Labeling_for_Chinese_Verbs/links/5b080fe84585157f8713e740/Automatic-Semantic-Role-Labeling-for-Chinese-Verbs.pdf) | IJCAI | 2005 | - |
+| [Towards Robust Semantic Role Labeling](https://aclanthology.org/N07-1070.pdf) | NAACL | 2007 | - |
+| [A Global Joint Model for Semantic Role Labeling](https://aclanthology.org/J08-2002.pdf) | CL | 2008 | - |
+| [Tree Kernels for Semantic Role Labeling](https://aclanthology.org/J08-2003.pdf) | CL | 2008 | - |
+| [Labeling Chinese Predicates with Semantic Roles](https://aclanthology.org/J08-2004.pdf) | CL | 2008 | - |
+
+<!-- ## Neural Network Methods
+
+## Graph-based Methods
+
+## Generative Methods -->
