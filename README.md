@@ -22,22 +22,6 @@ If you find our survey useful for your research, please cite the following paper
     }
 
 ## 📒 Table of Contents (Continuous updating...)
-<!-- - [Information Extraction tasks](#information-extraction-tasks)
-    - [Named Entity Recognition](#named-entity-recognition)
-    - [Relation Extraction ](#relation-extraction)
-    - [Event Extraction](#event-extraction)
-    - [Universal Information Extraction](#universal-information-extraction)
-- [Information Extraction Techniques](#information-extraction-techniques)
-    - [Supervised Fine-tuning](#supervised-fine-tuning)
-    - [Few-shot ](#few-shot)
-    - [Zero-shot](#zero-shot)
-    - [Data Augmentation](#data-augmentation)
-    - [Prompts Design](#prompts-design)
-    - [Constrained Decoding Generation](#constrained-decoding-generation)
-- [Specific Domain](#specific-domain)
-- [Evaluation and Analysis](#evaluation-and-analysis)
-- [Project and Toolkit](#project-and-toolkit) -->
-<!-- - ⏰ [Recently Updated Papers](#recently-updated-papers) (After 2025/02/09, the updated papers is here~) -->
 - ⭐️ [Datasets](#datasets) (with Download Link~)
     - [Textual SRL](#textual-srl)
     - [Visual SRL](#visual-srl)
@@ -45,9 +29,11 @@ If you find our survey useful for your research, please cite the following paper
     - [Speech SRL](#speech-srl)
 - [Method](#method)
     - [Statistical Machine Learning Methods](#statistical-machine-learning-methods)
-    <!-- - [Neural Network Methods](#neural-network-methods)
+    - [Neural Network Methods](#neural-network-methods)
+    - [Pre-trained Language Models](#pre-trained-language-models)
     - [Graph-based Methods](#graph-based-methods)
-    - [Generative Methods](#generative-methods) -->
+    - [Large Language Models](#large-language-models)
+    - [Multimodal Methods](#multimodal-methods)
 ## Project Format Reference
 
 This project follows the format of [Awesome-LLM4IE-Papers](https://github.com/quqxui/Awesome-LLM4IE-Papers/blob/main/README.md).
@@ -66,6 +52,8 @@ A taxonomy by various modals.
 | [HuRIC](https://www.sciencedirect.com/science/article/pii/S0004370218302935#tbl0030) | FrameNet | Human Robot Interaction | 897 | command | En, It | [Link](http://sag.art.uniroma2.it/demo-software/huric/) |
 | [ConSD](https://arxiv.org/pdf/1911.02851) | PropBank | PTB, PropBank, NomBank | 44,020 | sentence | En |  |
 | [Universal PropBank](https://aclanthology.org/2022.lrec-1.181.pdf) | PropBank | UD | 3,860,000 | sentence | Cs, De, El, Es, Fi, Fr, Hi, Hu, Id, It,<br>Ja, Ko, Mr, Nl, Pr, Pt, Ro, Ru, Ta, Te,<br>Uk, Vi, Zh | [Link](https://universalpropositions.github.io/) |
+| [NounAtlas](https://aclanthology.org/2024.acl-long.857.pdf) | PropBank | OntoNotes | 28,064 | sentence | En | [GitHub](https://github.com/SapienzaNLP/nounatlas) |
+
 
 ## Visual SRL
 | Dataset | Corpus | Scale | Scenario | Languages | Link |
@@ -74,6 +62,7 @@ A taxonomy by various modals.
 | [SituNet](https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Yatskar_Situation_Recognition_Visual_CVPR_2016_paper.pdf#:~:text=In%20this%20paper%2C%20we%20argue%20for%20explicitly%20en-coding,in%20cur-rent%20paradigms%20of%20recognition%2C%20in%20image%20understanding.) | Google image | 126,102 | image | En | [GitHub](https://github.com/my89/imSitu) |
 | [SWiG](https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123490307.pdf) | Google image | 126,102 | image | En | [GitHub](https://github.com/allenai/swig) |
 | [ExHVV](https://arxiv.org/pdf/2212.00715) | HVVMemes | 4,680 | image | En | [GitHub](https://github.com/shiv6891/EXCLAIM_WEB/tree/7a28639e2867ad55f1397ba13bf4bbcbe6a344d8/Artifacts/Data) | 
+| [Synthetic Multimodal Dataset](https://aclanthology.org/2025.emnlp-main.1212.pdf) | Synthetic (Diffusion Models) | 11,000+ | image-command | En | [GitHub](https://github.com/crux82/GroundedSRL4HRI) |
 
 ## Video SRL
 | Dataset | Corpus | Scale | Scenario | Languages | Link |
@@ -99,8 +88,61 @@ A taxonomy by various learning paradigms.
 | [Tree Kernels for Semantic Role Labeling](https://aclanthology.org/J08-2003.pdf) | CL | 2008 | - |
 | [Labeling Chinese Predicates with Semantic Roles](https://aclanthology.org/J08-2004.pdf) | CL | 2008 | - |
 
-<!-- ## Neural Network Methods
+## Neural Network Methods
+|  Paper  |      Venue    |   Date  | Code |
+| :----- | :--------------: | :------- | :---------: |
+| [Natural Language Processing (Almost) from Scratch](https://www.jmlr.org/papers/volume12/collobert11a/collobert11a.pdf) | JMLR | 2011 | - |
+| [End-to-end learning of semantic role labeling using recurrent neural networks](https://aclanthology.org/P15-1109.pdf) | ACL | 2015 | - |
+| [Joint A* CCG Parsing and Semantic Role Labelling](https://aclanthology.org/D15-1169.pdf) | EMNLP | 2015 | - |
+| [Deep Semantic Role Labeling: What Works and What's Next](https://aclanthology.org/P17-1044.pdf) | ACL | 2017 | [GitHub](https://github.com/luheng/deep_srl) |
+| [Linguistically-Informed Self-Attention for Semantic Role Labeling](https://aclanthology.org/D18-1548.pdf) | EMNLP | 2018 | [GitHub](https://github.com/strubell/LISA) |
+| [Syntax for Semantic Role Labeling, To Be, Or Not To Be](https://aclanthology.org/P18-1192.pdf) | ACL | 2018 | - |
+
+## Pre-trained Language Models
+|  Paper  |      Venue    |   Date  | Code |
+| :----- | :--------------: | :------- | :---------: |
+| [Deep contextualized word representations](https://aclanthology.org/N18-1202.pdf) | NAACL | 2018 | [GitHub](https://github.com/allenai/allennlp) |
+| [BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding](https://aclanthology.org/N19-1423.pdf) | NAACL | 2019 | [GitHub](https://github.com/google-research/bert) |
+| [BERT for Joint Intent Classification and Slot Filling](https://arxiv.org/pdf/1902.10909) | arXiv | 2019 | [GitHub](https://github.com/monologg/JointBERT) |
+| [Semantic Role Labeling as Dependency Parsing: Exploring Latent Tree Structures Inside Arguments](https://aclanthology.org/2020.coling-main.230.pdf) | COLING | 2020 | - |
+| [Semantic Role Labeling with Iterative Structure Refinement](https://aclanthology.org/2020.emnlp-main.232.pdf) | EMNLP | 2020 | - |
+| [Semantic Role Labeling Guided Multi-turn Dialogue ReWriter](https://aclanthology.org/2021.emnlp-main.537.pdf) | EMNLP | 2021 | [GitHub](https://github.com/xuyan0213/srlguideddialogue) |
+| [Grounding End-to-End Pre-trained architectures for Semantic Role Labeling in multiple languages](https://journals.sagepub.com/doi/abs/10.3233/IA-230012) | Intelligenza Artificiale | 2023 | [GitHub](https://github.com/crux82/grounded-srl) |
+| [Transformer-based Swedish Semantic Role Labeling through Transfer Learning](https://aclanthology.org/2024.lrec-main.1458.pdf) | LREC | 2024 | [Språkbanken Text](https://spraakbanken.gu.se/) |
+| [A New Method for Cross-Lingual-based Semantic Role Labeling](https://arxiv.org/abs/2408.15896) | arXiv | 2024 | [GitHub](https://github.com/SapienzaNLP/unify-srl) |
+| [NounAtlas: Filling the Gap in Nominal Semantic Role Labeling](https://aclanthology.org/2024.acl-long.857.pdf) | ACL | 2024 | [GitHub](https://github.com/SapienzaNLP/nounatlas) |
+| [Semantic role labeling from chinese speech via end-to-end learning](https://aclanthology.org/2024.findings-acl.527.pdf) | ACL Findings | 2024 | [GitHub](https://github.com/DreamH1gh/SpeechSRL) |
+| [Semantic Role Labeling Guided Out-of-distribution Detection](https://aclanthology.org/2024.lrec-main.1275.pdf) | LREC | 2024 | - |
 
 ## Graph-based Methods
+|  Paper  |      Venue    |   Date  | Code |
+| :----- | :--------------: | :------- | :---------: |
+| [Encoding Sentences with Graph Convolutional Networks for Semantic Role Labeling](https://aclanthology.org/D17-1159.pdf) | EMNLP | 2017 | [GitHub](https://github.com/diegma/neural-dep-srl) |
+| [Semantic Role Labeling with Associated Memory Network](https://aclanthology.org/N19-1340.pdf) | NAACL | 2019 | - |
+| [Semantic Role Labeling Meets Definition Modeling: Using Natural Language to Describe Predicate-Argument Structures](https://aclanthology.org/2022.findings-emnlp.313.pdf) | EMNLP Findings | 2022 | [GitHub](https://github.com/SapienzaNLP/dsrl) |
+| [Syntax-aware Graph Attention Network for Semantic Role Labeling](https://aclanthology.org/2023.repl4nlp-1.15.pdf) | RepL4NLP | 2023 | - |
 
-## Generative Methods -->
+## Large Language Models
+|  Paper  |      Venue    |   Date  | Code |
+| :----- | :--------------: | :------- | :---------: |
+| [LLMs Can Also Do Well! Breaking Barriers in Semantic Role Labeling via Large Language Models](https://aclanthology.org/2025.findings-acl.1189.pdf) | ACL Findings | 2025 | [Github](https://github.com/fangfang123gh/LLM-SRL) |
+| [On the Role of Semantic Proto-roles in Semantic Analysis: What do LLMs know about agency?](https://aclanthology.org/2025.findings-acl.623/) | ACL Findings | 2025 | - |
+| [LLM for Semantic Role Labeling of Emotion Predicates in Russian](https://www.superfri.org/index.php/superfri/article/view/639) | Supercomputing Frontiers | 2025 | - |
+| [Leveraging ChatGPT for Enhancing Arabic NLP: Application for Semantic Role Labeling and Cross-Lingual Annotation Projection](https://ieeexplore.ieee.org/abstract/document/10820541/) | IEEE Access | 2025 | - |
+
+## Multimodal Methods
+|  Paper  |      Venue    |   Date  | Code |
+| :----- | :--------------: | :------- | :---------: |
+| [Visual Semantic Role Labeling](https://arxiv.org/pdf/1505.04474) | arXiv | 2015 | [GitHub](https://github.com/s-gupta/v-coco) |
+| [Situation Recognition: Visual Semantic Role Labeling for Image Understanding](https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Yatskar_Situation_Recognition_Visual_CVPR_2016_paper.pdf) | CVPR | 2016 | [GitHub](https://github.com/my89/imSitu) |
+| [Grounded Situation Recognition](https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123490307.pdf) | ECCV | 2020 | [GitHub](https://github.com/allenai/swig) |
+| [Visual Semantic Role Labeling for Video Understanding](https://openaccess.thecvf.com/content/CVPR2021/papers/Sadhu_Visual_Semantic_Role_Labeling_for_Video_Understanding_CVPR_2021_paper.pdf) | CVPR | 2021 | [GitHub](https://github.com/TheShadow29/VidSitu) |
+| [Embedding contextual information in seq2seq models for grounded semantic role labeling](https://link.springer.com/chapter/10.1007/978-3-031-27181-6_33) | AIxIA | 2022 | - |
+| [Grounded Semantic Role Labelling from Synthetic Multimodal Data for Situated Robot Commands](https://aclanthology.org/2025.emnlp-main.1212/) | EMNLP | 2025 | - |
+
+## Domain-Specific Applications
+|  Paper  |      Venue    |   Date  | Code |
+| :----- | :--------------: | :------- | :---------: |
+| [Transformer-Based Semantic Role Labeling for Crisis Events Using Semi-Supervised Learning on Low-Resource Language Twitter Texts](https://ieeexplore.ieee.org/abstract/document/11145067/) | IEEE Access | 2025 | - |
+| [A systematic review on semantic role labeling for information extraction in low-resource data](https://ieeexplore.ieee.org/abstract/document/10506493/) | IEEE Access | 2024 | - |
+| [Annotated data for semantic role labeling of crisis events in Indonesian Tweets](https://www.sciencedirect.com/science/article/pii/S2352340925004184) | Data in Brief | 2025 | - |
