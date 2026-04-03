@@ -52,7 +52,7 @@ A taxonomy by various modals.
 | [HuRIC](https://www.sciencedirect.com/science/article/pii/S0004370218302935#tbl0030) | FrameNet | Human Robot Interaction | 897 | command | En, It | [Link](http://sag.art.uniroma2.it/demo-software/huric/) |
 | [ConSD](https://arxiv.org/pdf/1911.02851) | PropBank | PTB, PropBank, NomBank | 44,020 | sentence | En |  |
 | [Universal PropBank](https://aclanthology.org/2022.lrec-1.181.pdf) | PropBank | UD | 3,860,000 | sentence | Cs, De, El, Es, Fi, Fr, Hi, Hu, Id, It,<br>Ja, Ko, Mr, Nl, Pr, Pt, Ro, Ru, Ta, Te,<br>Uk, Vi, Zh | [Link](https://universalpropositions.github.io/) |
-| [NounAtlas](https://aclanthology.org/2024.acl-long.857.pdf) | PropBank | OntoNotes | 28,064 | sentence | En | [GitHub](https://github.com/SapienzaNLP/nounatlas) |
+| [NounAtlas](https://aclanthology.org/2024.acl-long.857.pdf) | FrameNet | WordNet, SemCor | 10,086 | sentence | En | [GitHub](https://github.com/SapienzaNLP/nounatlas) |
 
 
 ## Visual SRL
@@ -63,6 +63,7 @@ A taxonomy by various modals.
 | [SWiG](https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123490307.pdf) | Google image | 126,102 | image | En | [GitHub](https://github.com/allenai/swig) |
 | [ExHVV](https://arxiv.org/pdf/2212.00715) | HVVMemes | 4,680 | image | En | [GitHub](https://github.com/shiv6891/EXCLAIM_WEB/tree/7a28639e2867ad55f1397ba13bf4bbcbe6a344d8/Artifacts/Data) | 
 | [Synthetic Multimodal Dataset](https://aclanthology.org/2025.emnlp-main.1212.pdf) | Synthetic (Diffusion Models) | 11,000+ | image-command | En | [GitHub](https://github.com/crux82/GroundedSRL4HRI) |
+| [HuRIC-G](https://aclanthology.org/2025.emnlp-main.1212.pdf) | HuRIC | 11,000+ | image-command | En | [GitHub](https://github.com/crux82/GroundedSRL4HRI) |
 
 ## Video SRL
 | Dataset | Corpus | Scale | Scenario | Languages | Link |
